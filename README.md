@@ -16,6 +16,7 @@ docker build -t genepi/microarray-eval:latest . # don't ignore the dot
 This command simulates array data from sequencing data. For each strand file included, an array will be created. 
 ```
 nextflow run main.nf -c tests/simulate_hg19.config -profile development
+This is a test.
 ```
 If you have not yet done this, under Linux you need to create a group docker and add your user to it.
 ```
