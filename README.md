@@ -17,6 +17,12 @@ This command simulates array data from sequencing data. For each strand file inc
 ```
 nextflow run main.nf -c tests/simulate_hg19.config -profile development
 ```
+If you have not yet done this, under Linux you need to create a group docker and add your user to it.
+```
+sudo groupadd docker
+sudo usermod -aG docker <username>
+```
+
 
 ## Run RSQ Calculation
 This command calculates the RSQ between sequencing data and imputed data. 
