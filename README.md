@@ -36,7 +36,7 @@ This command calculates the RSQ between sequencing data and imputed data for eac
 ```
 nextflow run main.nf -c tests/calc_rsq_${ref}.config -profile development
 ```
-Results are stored ioutput/calc_rsq_{ref}/ 
+Results are stored in ```output/calc_rsq_{ref}/```.
 
 ## Run Tests
 ````
