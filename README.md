@@ -11,17 +11,17 @@ git clone https://github.com/seppinho/microarray-eval-nf
 cd microarray-eval-nf
 docker build -t genepi/microarray-eval:latest . # don't ignore the dot
 ```
-
-## Run Chip Simulation
-This command simulates array data from sequencing data. For each strand file included, an array will be created. 
-```
-nextflow run main.nf -c tests/simulate_hg19.config -profile development
-This is a test.
-```
 If you have not yet done this, under Linux you need to create a group docker and add your user to it.
 ```
 sudo groupadd docker
 sudo usermod -aG docker <username>
+```
+
+## Run Chip Simulation
+This command simulates array data from sequencing data for references ```ref=hg19``` or ```ref=hg38```.
+For each strand file included in ```tests/data/strand_data/<ref>/```, and each sequencing file included in ```tests/data/sequence_data/<ref>/``` a simulated array will be created. The output is stored in output/simulate_<ref>
+```
+nextflow run main.nf -c tests/simulate_<ref>.config -profile development
 ```
 
 
